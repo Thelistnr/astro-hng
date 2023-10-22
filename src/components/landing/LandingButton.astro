@@ -1,0 +1,24 @@
+---
+interface Props {
+  text: string;
+  redirect: string;
+  classNames: string;
+  icon: string;
+  glassmorphism: boolean;
+}
+
+const { text, redirect, classNames, icon, glassmorphism } = Astro.props as Props;
+
+const glassmorphismClass = glassmorphism
+  ? 'backdrop-blur-7xl backdrop-filter bg-opacity-40'
+  : '';
+
+---
+<a href={redirect} class="no-underline">
+  <button class={`bg-[#FF601F] hover:bg-[#f8895e] font-semibold py-2 px-4 rounded-lg 
+  flex items-center justify-center mx-3 space-x-2 sm:py-3 sm:px-6 sm:text-lg md:py-4 md:px-8 
+  md:text-xl lg:py-5 lg:px-10 lg:text-2xl ${classNames} ${glassmorphismClass}`}>
+    <span>{text}</span>
+    <img src={icon} alt="Icon" />
+  </button>
+</a>

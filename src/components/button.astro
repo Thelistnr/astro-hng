@@ -1,0 +1,20 @@
+---
+interface ButtonProps {
+    children: ReactNode
+    className?: string
+    type?: string
+    href?: string
+    onClick?: () => void
+}
+const { children } = Astro.props as Props 
+const { className, type='submit', href='/', onClick } = Astro.props as Props
+---
+
+<button 
+  type={type} 
+  href={href}
+  onClick={onClick} 
+  className={`bg-[#FF601F] rounded-md px-3 py-1 ${className}`}
+>
+ {children}
+</button>

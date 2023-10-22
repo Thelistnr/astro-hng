@@ -1,0 +1,143 @@
+---
+import Button from '../components/button.astro'
+const links = [
+    {
+        name: 'About Us',
+        href: '/contact',
+    }, 
+     {
+        name: 'Portfolio',
+        href: '#',
+    }, 
+     {
+        name: 'Client',
+        href: '#',
+    }, 
+     {
+        name: 'Resources',
+        href: '/resource',
+    }, 
+]
+---'
+
+<div class='p-4 md:p-8 xl:mx-auto flex flex-row-reverse justify-between lg:block lg:text-[1.2rem]'>
+        <div class="grid toggle lg:hidden" id="toggle">
+            <img src='/menu.svg' alt='menu' />
+        </div>
+    <div class='flex items-center justify-between'>
+        <div class="flex items-center justify-between lg:w-[80%] lg:mx-auto lg:rounded-[15px] lg:shadow lg:shadow-[#EAECF0] lg:border lg:border-[#EAECF0] lg:border-[1px] lg:px-8">
+            <a href='/'><img src="/Tifi.svg" alt="" /></a>
+            <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] lg:text-[1rem] gap-[2rem] font-normal text-[#1D2939]'>
+              {links.map((link, index) => (
+                <li class='mx-2 my-4 relative' key={index}>
+                  <a href={link.href} class="text-[#1D2939] no-underline hover:text-[#FF601F] lg:text-[1.2rem]">
+                    {link.name}
+                  </a>
+                  {link.name === 'Client' && (
+                    <div class="hidden absolute top-6 left-0 bg-white border border-[#EAECF0] pt-4 pb-8 px-4 z-10 h-[7rem] w-[10rem]">
+                      <a href="/individuals" class="text-[#1D2939] lg:text-[1.2rem] no-underline my-2 hover:text-[#FF601F] block">Individuals</a>
+                      <a href="/business" class="text-[#1D2939] lg:text-[1.2rem] no-underline my-2 hover:text-[#FF601F]">Business</a>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <a href="/contact" class="no-underline">
+              <Button 
+                className={`hidden lg:block text-white mt-0 
+                font-Inter text-[.7rem] md:text-[.875rem] lg:text-[1rem] font-semibold`} 
+                href="/contact"
+                children={'LET’S TALK'}
+              />
+            </a>
+        </div>
+    </div>
+    <div class="toggleMode px-4 py-8 h-[100vh] bg-[#df0000] z-40 hidden" id="menu">
+      <div class='flex items-center justify-between'>
+        <a href='/'><img src="/Tifi.svg" alt="" class='mb-6'/></a>
+        <span class="material-symbols-outlined cursor-pointer" id="cancel">close</span>
+      </div>
+      <ul class='font-Noto-Sans text-[.7rem] md:text-[.875rem] font-normal text-[#1D2939]'>
+        {links.map((link, index) => (
+          <li class='mx-2 my-4' key={index}>
+            <a href={link.href} class="text-[#1D2939] no-underline hover:text-[#FF601F]" id="clientLink">
+              {link.name}
+            </a>
+            {link.name === 'Client' && (
+              <div class="hidden absolutes top-6 left-0 bg-white pt-4 pb-8 px-4 z-10 h-[7rem] " id="clientDropdown">
+                <a href="/individuals" class="text-[#1D2939] lg:text-[1.2rem] no-underline my-2 hover:text-[#FF601F] block">Individuals</a>
+                <a href="/business" class="text-[#1D2939] lg:text-[1.2rem] no-underline my-2 hover:text-[#FF601F]">Business</a>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <a href="/contact" class="no-underline">
+        <Button 
+          className={`text-white mt-6 font-Inter text-[.7rem] 
+          md:text-[.875rem] font-semibold`} 
+          href="/contact"
+          children={'LET’S TALK'}
+        />
+      </a>
+    </div>
+</div>
+
+<style type="text/tailwindcss">
+    .toggleMode {
+        @apply absolute top-0 right-0 w-[95%] md:w-[60%] transition-transform transform duration-500 ease-in-out bg-white
+    }
+
+    .relative:hover .absolute {
+      @apply block;
+    }
+
+    .absolute, absolutes {
+      @apply hidden;
+    }
+
+    #clientDropdown {
+      @apply hidden
+    }
+
+    #clientLink:hover + #clientDropdown,
+    #clientDropdown:hover {
+      @apply block
+    }
+
+
+</style>
+
+<script>
+  const menu = document.getElementById("menu")
+  const cancel = document.getElementById("cancel")
+  const toggle = document.getElementById("toggle")
+  const clientLink = document.getElementById("clientLink");
+  const clientDropdown = document.getElementById("clientDropdown");
+
+
+
+  toggle.addEventListener("click", () => {
+    console.log("toggle clicked")
+    if(menu.style.display == "none"){
+      menu.style.display = "block"
+    }
+    else{
+      menu.style.display = "none"
+    }
+  })
+
+    
+    cancel.addEventListener("click", () => {
+      console.log("cancel clicked")
+        menu.style.display = "none"
+    })
+
+    clientLink.addEventListener("click", () => {
+      if(clientDropdown.style.display = "block") {
+        clientDropdown.style.display = "none";
+      } else {
+        clientDropdown.style.display = "block"
+      }
+    });
+</script>

@@ -1,0 +1,117 @@
+---
+import video from '../videos/video.mp4'; 
+const videoData = [
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+];
+
+
+---
+
+<style>
+.get_in_touch{
+            color: var(--gray-1100, #101828);
+            text-align: center;
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 72px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        .get_in_touch_text{
+            color: var(--gray-900, #344054);
+            text-align: center;
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 25.6px */
+        }
+        .get_in_touch_brand{
+            color: var(--gray-900, #344054);
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%;
+        }
+        .form_link{
+        color: var(--gray-900, #344054);
+        text-align: center;
+        font-family: Noto Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+        }
+        .form_link_active{
+            cursor: pointer;
+            color: #FF601F;
+            text-align: center;
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #FF601F;
+        }
+</style>
+
+<div class='py-20 my-20 bg-gray-200'>
+<h2 class="w-full text: 3xl md:text-4xl text-center mb-4 px-10">Carefully Picked Videos</h2>
+<div class="row justify-content-center mb-5" style="border-bottom: 1px solid var(--gray-500, #D0D5DD);">
+    <div  class={`col-auto business_link form_link_active`}>Business</div>
+    <div  class={`col-auto individual_link form_link`}>Individual</div>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6 lg:max-w-[80%] mx-auto">
+  {videoData.map((item, index) => (
+    <div key={index} class="relative group">
+      <video width="100%" height="auto" controls class="brightness-0 group-hover:brightness-100  transition-all duration-300 rounded">
+        <source src={item.video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="group-hover:opacity-0 cursor-pointer">
+        <img src='/bg.jpg' width="100%" class="absolute top-0 left-0 rounded" alt="Background Image" style='height: 100%'>
+        <img src="/play.png" width="70px" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Play Button">
+        <p class="absolute bottom-0 left-4 text-white p-2 rounded">
+          {item.text}
+        </p>
+      </div>
+    </div>
+  ))}
+</section>
+
+
+</div>
+
+
+
+
+
+
+

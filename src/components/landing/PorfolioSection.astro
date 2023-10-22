@@ -1,0 +1,52 @@
+---
+import LandingButton from "./LandingButton.astro";
+---
+<div class="border-t-2 border-t-gray-300 w-full mt-10"></div>
+<section class="mx-auto mt-10 p-6 grid gap-8 max-w-[77.5rem]">
+    <h2 class="col-span-full mx-auto mb-6 font-semibold text-2xl text-gray-1100 text-center md:text-4xl lg:text-5xl lg:max-w-[48rem]">...but what makes us so special...</h2>
+
+    <div class="flex flex-col gap-2 lg:flex-row lg:items-center">
+        <div class="grid gap-2 lg:min-w-[28rem] ">
+            <span class="font-bold text-5xl text-gray-500">01</span>
+            <h3 class="font-medium text-2xl capitalize xl:text-3xl">We <span class="text-[#FF601F]">craft</span> compelling media</h3>
+            <p>We empower you to create captivating stories that resonate with your audience</p>
+        </div>
+
+        <div class="w-full">
+            <img class="rounded-lg md:hidden" src='/landing/threegrid1.svg' alt=''>
+            <img class="hidden w-full rounded-lg md:block" src='./landing/threegrid1.svg' alt=''>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 lg:flex-row lg:items-center">
+        <div class="grid gap-2 lg:min-w-[28rem] ">
+            <span class="font-bold text-5xl text-gray-500">02</span>
+            <h3 class="font-medium text-2xl capitalize xl:text-3xl">We Stay<span class="text-[#FF601F]">Ahead</span> of Trends</h3>
+            <p>We empower you to create captivating stories that resonate with your audience</p>
+        </div>
+
+        <div class="w-full">
+            <img class="rounded-lg md:hidden" src='/landing/threegrid2.svg' alt=''>
+            <img class="hidden w-full rounded-lg md:block" src='/landing/threegrid2.svg' alt=''>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 lg:flex-row lg:items-center">
+        <div class="grid gap-2 lg:min-w-[28rem] ">
+            <span class="font-bold text-5xl text-gray-500">03</span>
+            <h3 class="font-medium text-2xl capitalize xl:text-3xl">We Elevate Visual<span class="text-[#FF601F]">Quality</span></h3>
+            <p>We empower you to create captivating stories that resonate with your audience</p>
+        </div>
+
+        <div class="w-full">
+            <img class="rounded-lg md:hidden" src='/landing/threegrid3.svg' alt=''>
+            <img class="hidden w-full rounded-lg md:block" src='/landing/threegrid3.svg' alt=''>
+        </div>
+    </div>
+    <div class="flex justify-center items-center w-full mt-10">
+        <LandingButton redirect="/business" 
+        text="VIEW RECENT WORK"
+         icon="/landing/lets-talk2.svg"
+          classNames="text-black bg-transparent border-[1px] border-gray-500"
+          glassmorphism={false}/>
+      </div></section>

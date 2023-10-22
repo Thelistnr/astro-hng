@@ -1,0 +1,64 @@
+---
+import './Styles/Business.scss';
+import LandingButton from './LandingButton.astro';
+---
+<section class="mt-12">
+    <h2 class="bg-[#101828] px-4 py-[5rem] font-[800] text-5xl text-[#FFFFFF36] text-center uppercase leading-[1.5] md:text-6xl md:text-start md:py-[9rem] xl:text-7xl xl:py-[14rem]">
+        <p class="flex flex-col mx-auto md:max-w-[46rem] xl:max-w-[56rem]">
+            Your vision
+            <span class="inline-block self-end">...is our mission</span>
+        </p>    
+    </h2>
+    
+		<section class="custom-solutions-section">
+			<div class="solutions-title-container">
+				<p class="solutions-title-text hidden md:block font-noto">WHO WE HELP</p>
+				<p class="solutions-title-text block md:hidden font-noto">WHO WE HELP</p>
+				<h3 class="solutions-title font-redhat">We offer Custom Solutions for...</h3>
+			</div>
+			<div class="solution-cards">
+				<div class="solution-card bg-[#F2F4F7]">
+					<h4 class="solution-card-title">Businesses and Brands</h4>
+                    <p>
+                        We're dedicated to helping businesses harness the true potential of video content to connect with their audience, drive conversions, and elevate their brand presence.
+                    </p>
+					<ul class="solution-list">
+						<li><img src="/landing/status.svg"/> Startups</li>
+						<li><img src="/landing/status.svg"/> Retail and E-commerce</li>
+						<li><img src="/landing/status.svg"/> Real Estate</li>
+						<li><img src="/landing/status.svg"/> Entertainment and Media</li>
+						<li><img src="/landing/status.svg"/> Education and E-Learning</li>
+						<li><img src="/landing/status.svg"/> And many more</li>
+					</ul>
+					<p>We&apos;re here to help you. Reach out to us as soon as possible!</p>
+                    <div class="flex justify-center items-center w-full">
+						<LandingButton redirect="/business" 
+						text="SEE BUSINESSES" 
+						icon="/landing/lets-talk2.svg" 
+						classNames="text-black bg-transparent border-[1px] border-gray-500"
+						glassmorphism={false}/>
+                      </div>				</div>
+
+				<div class="solution-card bg-[#fcece7]">
+					<h4 class="solution-card-title font-noto">Individuals</h4>
+                    <p>
+                        Whether you're a content creator, a filmmaker, or someone with a passion for video, we're here to help you turn your vision into captivating reality, enhancing your storytelling, and making every frame count.
+                    </p>
+					<ul class="solution-list">
+						<li><img src="/landing/status.svg"/> Content Creators</li>
+						<li><img src="/landing/status.svg"/> Travel Enthusiasts</li>
+						<li><img src="/landing/status.svg"/> Special Occasion Celebrants</li>
+						<li><img src="/landing/status.svg"/> Email Marketing Videos</li>
+						<li><img src="/landing/status.svg"/> Creative Artists</li>
+						<li><img src="/landing/status.svg"/> And many more</li>
+					</ul>
+					<div class="flex justify-center items-center w-full">
+						<LandingButton redirect="/resource" 
+						text="SEE INDIVIDUALS" 
+						icon="/landing/lets-talk2.svg" 
+						classNames="text-black bg-transparent border-[1px] border-gray-500"
+						glassmorphism={false}/>
+					  </div>
+				</div>
+			</div>
+</section>

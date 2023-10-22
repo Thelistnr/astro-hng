@@ -1,0 +1,231 @@
+---
+// let business_active = true
+// let individual_active = false
+---
+
+<script>
+    let business_form = document.getElementById('business_form');
+    let individual_form = document.getElementById('individual_form');
+
+    const business_link = document.querySelector(".business_link");
+    business_link.addEventListener("click", () => {
+        console.log("Hello, on client");
+        business_form.style.display = 'flex'
+        business_link.classList.add('form_link_active');
+        business_link.classList.remove('form_link');
+
+        individual_form.style.display = 'none';
+        individual_link.classList.add('form_link');
+        individual_link.classList.remove('form_link_active');
+
+    });
+
+    const individual_link = document.querySelector(".individual_link");
+    individual_link.addEventListener("click", () => {
+        console.log("Hello, on client");
+        business_form.style.display = 'none'
+        business_link.classList.add('form_link');
+        business_link.classList.remove('form_link_active');
+
+        individual_form.style.display = 'flex'
+        individual_link.classList.add('form_link_active');
+        individual_link.classList.remove('form_link');
+    });
+   
+</script>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <title>Bootstrap demo</title> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Noto+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500&family=Red+Hat+Display:wght@400;700&display=swap');
+        .get_in_touch{
+            color: var(--gray-1100, #101828);
+            text-align: center;
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 72px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        .get_in_touch_text{
+            color: var(--gray-900, #344054);
+            text-align: center;
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 25.6px */
+        }
+        .get_in_touch_brand{
+            color: var(--gray-900, #344054);
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%;
+        }
+        .form_link{
+        color: var(--gray-900, #344054);
+        text-align: center;
+        font-family: Noto Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+        }
+        .form_link_active{
+            cursor: pointer;
+            color: #FF601F;
+            text-align: center;
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #FF601F;
+        }
+        form label{
+            color: var(--gray-700, #344054);
+            font-family: Plus Jakarta Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px; /* 142.857% */
+        }
+        input::placeholder {
+            color: var(--gray-600, #98A2B3);
+            font-family: Plus Jakarta Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+        }
+        textarea::placeholder {
+            color: var(--gray-600, #98A2B3);
+            font-family: Plus Jakarta Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+        }
+        form button{
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: #FF601F;
+            border-color:#FF601F;
+            color: var(--base-white, #FFF);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 24px; /* 150% */
+            transition : all 0.3s;
+        }
+        form button:active{
+            background: #FF601F;
+            border-color:#FF601F;
+            opacity : 0.5;
+        }
+        .pink{
+            padding: 96px 0px;
+            background: rgba(255, 77, 0, 0.17);
+        }
+        .pink .pink_text{
+            color: var(--gray-1000, #1D2939);
+            font-family: Noto Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 150% */
+        }
+        a{
+            text-decoration:none !important;
+        }
+    </style>
+    <div>
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-5" style="border-bottom: 1px solid var(--gray-500, #D0D5DD);">
+                <div  class={`col-auto business_link form_link_active`}>Business</div>
+                <div  class={`col-auto individual_link form_link`}>Individual</div>
+            </div>
+            <form id = 'business_form' class="row justify-content-center" action="">
+                <div class="col-10 col-sm-8 col-lg-5">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="company_name">Company Name</label>
+                            <input type="text" id="company_name" class="form-control" placeholder="Enter business name">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="Business Email Address">Business Email Address</label>
+                            <input type="text" id="Business Email Address" class="form-control" placeholder="Enter email address">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="subject">Subject (Optional)</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="exampleFormControlTextarea1" class="form-label">Tell us what you need.</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" row ='3' placeholder="Type your message..."></textarea>
+                          </div>
+                    </div>
+                    <div class="row mb-5">
+                        <button type = 'button' class="col btn btn-primary">SEND MESSAGE</button>
+
+                    </div>
+                </div>
+            </form>
+            <form id = 'individual_form'  class="row justify-content-center" action="" style = 'display:none'>
+                <div class="col-10 col-sm-8 col-lg-5">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="full_name">Full Name</label>
+                            <input type="text" id="full_name" class="form-control" placeholder="Enter full name">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="email_Address">Email Address</label>
+                            <input type="text" id="email_Address" class="form-control" placeholder="Enter email address">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="subject">Subject (Optional)</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="exampleFormControlTextarea1" class="form-label">Tell us what you need.</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" row ='3' placeholder="Type your message..."></textarea>
+                          </div>
+                    </div>
+                    <div class="row mb-5">
+                        <button type = 'button' class="col btn btn-primary">SEND MESSAGE</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

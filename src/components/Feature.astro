@@ -1,0 +1,28 @@
+---
+import Videos from '../components/Videos.astro'
+import FAQ from '../components/FAQ.astro'
+
+const items = Array.from({ length: 7 }, (_, index) => index + 1);
+const text = 'We harness cutting-edge technology to capture the dynamic evolution of landscapes, cityscapes, and more.'
+---
+
+
+<div class="px-[.7rem] mx-auto">
+ <h2 class="text-[2rem] text-[#1D2939] text-center font-medium font-Noto-Sans">Features</h2>
+ <div class="md:flex flex-wrap gap-[2rem] md:gap-[1rem] lg:gap-[2.5rem] xl:gap-[3rem] mx-auto">
+  {items.map((items, i) => (
+   <div key={i} class="my-[1.5rem] w-[21.3rem] lg:w-[23rem] xl:w-[27rem]">
+       <img src="/Image.png" alt="video" class="mb-[2rem] w-full" />
+        <div>
+            <h5 class="text-[#FF601F] font-Noto-Sans text-[.875rem] font-medium">Video Editing</h5>
+            <div class="my-[.75rem] text-[#101828] text-[1.25rem] font-medium flex items-center justify-between">
+                <h2 class="">Time lapse and Mapping</h2>
+                <span class="material-symbols-outlined">north_east</span>
+            </div>
+            <p class="font-Noto-Sans text-[#667085] font-normal">{text}</p>
+        </div>
+    </div>
+    ))}
+ <div>
+ </div>
+</div>

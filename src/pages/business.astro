@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/layout.astro"
+import FAQ from "../components/FAQ.astro"
+import Hero from "../components/business/hero.astro"
+import Service from "../components/business/service.astro"
+import Offer from "../components/business/offer.astro"
+import Analytic from "../components/business/analytics.astro"
+import Case from "../components/business/casestudy.astro"
+import Conclusion from "../components/business/conclusion.astro"
+import Company from '../components/Company.astro'
+import Newsletter from "../components/business/newsletter.astro"
+
+---
+
+<Layout>
+    <div class="overflow-x-hidden">
+        <Hero/>
+        <Service/>
+        <Offer/>
+        <Analytic/>
+        <Case/>
+        <Conclusion/>
+        <Newsletter/>
+    <div class="mt-10">
+        <FAQ/>
+    </div>
+    <div class="my-10">
+        <Company/>
+    </div>
+    </div>
+</Layout>
+

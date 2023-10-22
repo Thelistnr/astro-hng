@@ -1,0 +1,105 @@
+---
+import Header from '../components/Header.astro'
+import Layout from '../layouts/layout.astro'
+import FAQ from '../components/FAQ.astro'
+import Videos from '../components/Videos.astro'
+import Navbar from '../components/Navbar.astro'
+import Feature from '../components/Feature.astro'
+import Company from '../components/Company.astro'
+import Footer from '../components/Footer.astro'
+import Form from '../components/Form.astro'
+
+
+const text = 'The latest industry news, technologies, and resources.'
+const overflows = [
+    {
+        name: 'Video Editing Tips',
+    },
+    {
+        name: 'Creative Storytelling',
+    },
+    {
+        name: 'Corporate Videos',
+    },
+    {
+        name: 'Video Marketing',
+    },
+]
+---
+
+<Layout title='Resources'>
+    <div class='lg:mx-auto lg:max-w-[80%] pt-[4rem]'>
+      <div class="bg-gradient-to-b from-[#fff] to-[#D0D5DD] pb-6">
+        <h1 class='text-center text-[#101828] font-medium text-[2rem] md:text-[4rem]'>Resources and <span class="text-[#FF601F]">Insights</span></h1>
+        <p class="text-center mt-[1.5rem] font-Noto-Sans">{text}</p>
+        <div class="flex items-center gap-[1rem] py-[.75rem] text-[#667085] px-[1rem] my-[1.5rem] mx-auto border border-[1px] bg-white rounded-md w-[90%] md:w-[40%]">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder='Search' class="border border-none outline outline-none"/>
+        </div>
+      </div>
+      <div class="mt-[3rem] p-4 overflow-x-auto md:p-6">
+        <ul class="flex gap-[2rem] overflow-x-auto whitespace-nowrap">
+          {overflows.map((overflow, index) => (
+            <li key={index} class="flex-none">{overflow.name}</li>
+          ))}
+        </ul>
+        <div class="flex gap-[2rem] mt-[2rem]">
+          <div class="p-4 border rounded-md w-[50%]" id="dropdown-div">
+            <h2>Video</h2>
+          </div>
+          <div class="p-4 border rounded-md w-[50%]" id="dropdown-div2">
+            <h2>Newest first</h2>
+          </div>
+        </div>
+        <div class="relative text-black">
+          <ul class="dropdowns hidden absolute p-4 w-[45%] h-[40px] bg-[#D0D5DD]" id="dropdown">
+            <li class="flex-none>Audio</li>
+            <li class="flex-none>Books</li>
+          </ul>
+          <ul class="dropdowns-two hidden absolute text-center h-24  p-4 bg-[#D0D5DD] right-0 w-[45%]" id="dropdown-2">
+            <li class="flex-none>Audio</li>
+            <li class="flex-none>Audio</li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-4">
+        <Feature />
+      </div>
+    </div>
+  <div class=" flex flex-col gap-[48px]">
+      <div class=" flex flex-col justify-center items-center text-center gap-[48px] mx-2 sm:mx-10 ">
+          <p class=" lg:block justify-center items-center text-center hidden m-0 p-0 text-[72px] font-bold"> LET&lsquo;S <span class=" inline-flex text-[#ff601f]"> CREATE</span> SOMETHING SPECIAL TOGETHER.</p>
+          <p class=" md:flex justify-center items-center text-center hidden lg:hidden text-[48px] font-bold m-0 p-0"> LET US KNOW HOW WE CAN HELP YOU.</p>
+          <p class=" block justify-center items-center text-center sm:hidden m-0 p-0 text-[32px] font-bold"> LET&lsquo;S <span class=" inline-flex text-[#ff601f]"> CREATE</span> SOMETHING SPECIAL TOGETHER.</p>
+          <p class=" justify-center items-center text-center flex m-0 p-0">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
+      </div>
+      <Form/>
+  </div>
+  <FAQ/>
+  <Company/>
+</Layout>
+
+<script>
+ const dropdownDiv = document.getElementById("dropdown-div")
+ const dropdown = document.getElementById("dropdown")
+ const dropdown2 = document.getElementById("dropdown-2")
+ const dropdownDiv2 = document.getElementById("dropdown-div2")
+
+ dropdownDiv.addEventListener("click", () => {
+    const dropdowns = dropdownDiv.classList.toggle("dropdown-div")
+    if (dropdowns) {
+        dropdown.style.display = 'block';
+    }else {
+        dropdown.style.display = 'none';
+    }
+ })
+
+ dropdownDiv2.addEventListener("click", () => {
+    const dropdowns = dropdownDiv2.classList.toggle("dropdown-div2")
+    if (dropdowns) {
+        dropdown2.style.display = 'block';
+    }else {
+        dropdown2.style.display = 'none';
+    }
+ })
+</script>

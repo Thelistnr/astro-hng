@@ -1,0 +1,81 @@
+---
+const text = "Experience the power of storytelling through the lens of creativity and innovation."
+
+const footerLink = [
+    {
+        name: "Portfolio",
+        link: '#'
+    },
+    {
+        name: "Resources",
+        link: '#'
+    },
+    {
+        name: 'For Businesses',
+        link: '#'
+    },
+    {
+        name: 'For Individuals',
+        link: '#'
+    },
+]
+
+const socialLinks = [
+    {
+        social: "fa-twitter",
+        link: '#',
+        brands: "fa-brands"
+    },
+    {
+        social: "fa-linkedin",
+        link: '#',
+        brands: "fa-brands"
+    },
+    {
+        social: "fa-facebook",
+        link: '#',
+        brands: "fa-brands"
+    },
+    {
+        social: "fa-github",
+        link: '#',
+        brands: "fa-brands"
+    },
+    {
+        social: "fa-dribbble",
+        link: '#',
+        brands: "fa-brands"
+    },
+        {
+        social: "fa-hand-peace",
+        link: '#',
+        brands: "fa-regular"
+    },
+]
+
+const copyright = `© ${new Date().getFullYear()} Tifi. All rights reserved.`
+---
+
+<footer class="p-6 text-[#344054] font-Noto-Sans lg:max-w-[80%] mx-auto my-24">
+ <a href='/'><img src='/Tifi.svg' alt='logo' class="mb-[2rem]"/></a>
+ <p class='mb-[2rem]'>{text}</p>
+ <ul class='px-0 flex gap-[2rem] flex-wrap text-[1.2rem] mb-[1.5rem] text-[#667085]'>
+   {footerLink.map((footer, index) =>(
+    <li class='' key={index}>
+      <a href={footer.link} class='' style="text-decoration:none; color:#000">{footer.name}</a>
+    </li>
+   ))}
+ </ul>
+ <div class="pt-[2rem] text-[#667085] md:flex items-center justify-between">
+   <p>{copyright}</p>
+   <div class="mt-[2rem]">
+    <ul class="flex gap-[1.5rem]">
+      {socialLinks.map((socials,index) =>(
+        <li class="social" key={index}>
+            <a href={socials.link} class='' style="text-decoration:none; color:#000"><i class=`${socials.brands} ${socials.social}`></i></a>
+        </li>
+      ))}
+    </ul>
+   </div>
+ </div>
+</footer>

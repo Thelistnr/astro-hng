@@ -1,0 +1,143 @@
+---
+import Header from '../components/Header.astro'
+import Layout from '../layouts/layout.astro';
+import FAQ from '../components/FAQ.astro'
+import Videos from '../components/Videos.astro'
+import Navbar from '../components/Navbar.astro'
+import Company from '../components/Company.astro'
+import Footer from '../components/Footer.astro'
+import Form from '../components/Form.astro'
+---
+
+
+<Layout title='individual'>
+    <Header heading="For Individuals" text="In the realm of video creativity, every frame is a canvas, and we're here to help you paint your stories. Welcome to tifi.tv, where we cater to the unique needs of content creators, travelers, vloggers, and individuals with a passion for visual storytelling."/>
+
+    <main class="flex flex-col justify-cente items-center my-16 lg:my-20">
+            <section class="flex  bg-[#f2f4f7] py-[6rem] px-4 sm:px-[2rem] lg:px-[10rem] flex-col w-full">
+                <div class=" flex flex-col items-center justify-center gap-[0.625rem]">
+                    <div class="flex flex-col items-center pb-[3.5rem] gap-[1.5rem]">
+                        <h2 class="text-[#101828] text-center text-5xl font-semibold">Unlock Your <span class=" text-[#ff601f]">Creative</span> Potential</h2>
+                        <p class=" text-[#344054] text-center text-base">Whether you're documenting your travels, sharing your daily adventures, or building your personal brand, we're here to help.</p>
+                    </div>
+                    <div class="flex flex-col lg:flex-row w-full justify-center items-center gap-[2rem]">
+                        <div class="flex bg-white flex-col rounded-lg w-[100%] lg:w-[19rem]">
+                            <img src="/Frame 401.png" class=" overflow-hidden rounded-t-lg"/>
+                            <div class="flex pt-[2rem] px-[1rem] pb-[1.25rem] flex-col justify-center items-center gap-2 self-stretch font-noto">
+                                <h3 class="text-[#101828] text-center text-[1.125rem] font-[700] leading-[160%]"><span class=" text-[#ff601f]">Professional </span>Quality</h3>
+                                <p class="text-[#344054] text-center text-base leading-[160%]">You can achieve professional-level video content that rivals that of larger productions, ensuring a high-quality end product.</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white flex-col rounded-lg w-[100%] lg:w-[19rem]">
+                            <img src="/Frame 402.png" class=" overflow-hidden rounded-t-lg"/>
+                            <div class="flex pt-[2rem] px-[1rem] pb-[1.25rem] flex-col justify-center items-center gap-2 self-stretch font-noto">
+                                <h3 class="text-[#101828] text-center text-[1.125rem] font-[700] leading-[160%]">Personal<span class=" text-[#ff601f]"> Branding</span></h3>
+                                <p class="text-[#344054] text-center text-base leading-[160%]">Professional videos tend to engage and captivate audiences more effectively, helping you connect with your viewers.</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white flex-col rounded-lg w-[100%] lg:w-[19rem]">
+                            <img src="/Frame 403.png" class=" overflow-hidden rounded-t-lg"/>
+                            <div class="flex pt-[2rem] px-[1rem] pb-[1.25rem] flex-col justify-center items-center gap-2 self-stretch font-noto">
+                                <h3 class="text-[#101828] text-center text-[1.125rem] font-[700] leading-[160%]"><span class=" text-[#ff601f]">Internal</span> Communications</h3>
+                                <p class="text-[#344054] text-center text-base leading-[160%]">Benefit from your our support in creating videos that enhance personal brand, helping you stand out in the digital landscape.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class=" text-[#344054] text-center w-[80%] lg:w-[43.875rem] py-[3.5rem] px-0 leading-[160%]">With tifi.tv, your creative vision transforms into captivating visual stories.</p>
+                    <a href="/contact" class="flex no-underline shadow-[0px 14px 16px 0px rgba(29, 41, 57, 0.05)] rounded-lg bg-[#ff601f] py-[0.75rem] p-[1.25rem] justify-center items-center gap-3 text-white font-extrabold leading-6 hover:opacity-[0.8]">Let's Talk <img src="/DiagArrow.png" /></a>
+                </div>
+            </section>
+            <section class="flex flex-col bg-[#fcfcfd] w-full py-24 px-4 lg:px-40 justify-center items-center gap-14">
+                <div class="flex flex-col items-center gap-6 self-stretch">
+                    <p class="text-[#ff601f] text-center text-xl font-bold leading-[160%] hidden md:block font-noto">WHAT WE CAN DO FOR YOU</p>
+                    <p class="text-[#ff601f] text-center text-xl font-bold leading-[160%] block md:hidden font-noto">WHO WE HELP</p>
+                    <h3 class="text-[#101828] text-xl font-bold leading-[160%] font-redhat">Custom Solutions for...</h3>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="flex rounded-2xl p-4 w-[full] sm:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#F2F4F7]">
+                        <h4 class="text-[#101828] text-[2.25rem] font-bold leading-[160%]">Personal Vlogs & Lifestyle</h4>
+                        <ul class="flex flex-col items-start pb-8 gap-2 self-stretch">
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Vlog Editing</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Traveling Vlogs</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Day-in-the-life Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Celebration Highlights</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Family Memories</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> And many more</li>
+                        </ul>
+                        <p>We&apos;re here to help you. Reach out to us as soon as possible!</p>
+                    </div>
+                    <div class="flex rounded-2xl p-4 w-[full] sm:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#fcece7]">
+                        <h4 class="text-[#101828] text-[2.25rem] font-bold leading-[160%] font-noto">Content & Personal Branding</h4>
+                        <ul class="flex flex-col items-start pb-8 gap-2 self-stretch">
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Online Courses and Tutorials</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Personal Branding Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> YouTube Online Content</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> Video Resumes and Portfolios</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png" class=" h-6"/> And many more</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="flex bg-[#f2f4f7] py-[6rem] px-4 sm:px-[2rem] lg:px-[10rem] flex-col w-full justify-center items-center gap-14">
+                    <div class=" gap-[24px] flex flex-col justify-center items-center">
+                        <h3 class="text-[#101828] text-center text-5xl font-semibold font-redhat h-[85px]">Case <span class=" text-[#ff601f]">Studies</span></h3>
+                        <div class="text-[#344054] text-center text-base max-w-[702px] h-[78]">Explore some of our standout projects, each representing a unique facet of our video editing and storytelling expertise. These projects transcend mere videos; they're captivating narratives that inspire and make an impact.</div>
+                    </div>
+                    <div class="flex  flex-wrap lg:gap-[36px] gap-[32px] justify-center items-center">
+                        <div class="bg-white w-[361px] h-[336px] lg:w-[373.33px] rounded-lg gap-[10px] px-[31px] py-[30px]">
+                            <div class=" flex flex-col">
+                                <div class=" h-[204px]">
+                                    <h1 class="text-[24px] leading-[38.4px] text-[#1D2939] font-bold">Wanderlust Chronicles</h1>
+                                    <p class="text-[16px] leading-[25.6px] text-[#344054] pb-[38px]">The project garnered over 1 million views and sparked a 20% increase in travel bookings for our client</p>
+                                </div>
+                                <button class="flex items-center justify-center space-x-3 text-[16px] leading-[24px] text-[#101828] border-[1px] border-[#D0D5DD] rounded-[8px] py-[12px] px-[20px]">
+                                <span class=" font-extrabold"> LEARN MORE </span>
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 2L2.5 16M16.5 2V15.1765M16.5 2H3.32353" stroke="#101828" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel"/>
+                            </svg>
+                                </button>
+                           </div>
+                        </div>
+                        <div class="bg-white w-[361px] h-[336px] lg:w-[373.33px] rounded-lg gap-[10px] px-[31px] py-[30px]">
+                            <div class=" flex flex-col">
+                                <div class=" h-[204px]">
+                                    <h1 class="text-[24px] leading-[38.4px] text-[#1D2939] font-bold">City Vibes Unveiled</h1>
+                                    <p class="text-[16px] leading-[25.6px] text-[#344054] pb-[38px]">The series achieved a 30% increase in viewer engagement, with viewers expressing a strong connection to the featured cities.</p>
+                                </div>
+                                <button class="flex items-center justify-center space-x-3 text-[16px] leading-[24px] text-[#101828] border-[1px] border-[#D0D5DD] rounded-[8px] py-[12px] px-[20px]">
+                                <span class=" font-extrabold"> LEARN MORE </span>
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 2L2.5 16M16.5 2V15.1765M16.5 2H3.32353" stroke="#101828" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel"/>
+                            </svg>
+                                </button>
+                           </div>
+                        </div>
+                        <div class="bg-white w-[361px] h-[336px] lg:w-[373.33px] rounded-lg gap-[10px px-[31px] py-[30px]">
+                            <div class=" flex flex-col">
+                                <div class=" h-[204px]">
+                                    <h1 class="text-[24px] leading-[38.4px] text-[#1D2939] font-bold">A Lifetime in a Day</h1>
+                                    <p class="text-[16px] leading-[25.6px] text-[#344054] pb-[38px]">The video left a lasting impression, with heartfelt reactions from viewers and 50,000 shares across social media platforms.</p>
+                                </div>
+                                <button class="flex items-center justify-center space-x-3 text-[16px] leading-[24px] text-[#101828] border-[1px] border-[#D0D5DD] rounded-[8px] py-[12px] px-[20px]">
+                                <span class=" font-extrabold"> LEARN MORE </span>
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 2L2.5 16M16.5 2V15.1765M16.5 2H3.32353" stroke="#101828" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel"/>
+                            </svg>
+                                </button>
+                           </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <div class=" flex flex-col gap-[48px] w-[95%] sm:w-full">
+            <div class=" flex flex-col justify-center items-center text-center gap-[48px] mx-2 sm:mx-10 w-[90%]">
+                <p class=" lg:flex justify-center items-center text-center hidden m-0 p-0 text-[72px] font-bold"> LET US KNOW HOW WE CAN HELP YOUR BUSINESS.</p>
+                <p class=" sm:flex justify-center items-center text-center hidden lg:hidden text-[48px] font-bold m-0 p-0"> LET US KNOW HOW WE CAN HELP YOU.</p>
+                <p class=" block justify-center items-center text-center sm:hidden m-0 p-0 text-[32px] font-bold"> LET&lsquo;S <span class=" inline-flex text-[#ff601f]"> CREATE</span> SOMETHING SPECIAL TOGETHER.</p>
+                <p class=" lg:hidden justify-center items-center text-center flex m-0 p-0">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
+            </div>
+            <Form/>
+        </div>
+        <FAQ/>
+        <div class=" w-full"><Company/></div>
+</Layout>
